@@ -52,8 +52,42 @@ Example usage with a date parameter:
 .\UserActivityTracking.ps1 2023-12-01
 ```
 
-> **Disclaimer**  
+> **Disclaimer:**  
 > Each time the script is run, it overwrites any previously generated files for the same date. Ensure to backup or rename files if you need to retain data for multiple runs on the same day.
+> 
+### Additional Instructions
+
+Before running the script, ensure you have the necessary permissions and your system's execution policy allows running PowerShell scripts.
+
+If you encounter an error related to script execution policies (such as "cannot be loaded because running scripts is disabled on this system"), you may need to change the execution policy. 
+
+#### Changing the Execution Policy
+
+1. **Open PowerShell as an Administrator**:
+   - Right-click on the Start button and select "Windows PowerShell (Admin)".
+
+2. **Check the Current Execution Policy**:
+   - Run the following command to see your current policy:
+     ```powershell
+     Get-ExecutionPolicy
+     ```
+
+3. **Set the Execution Policy to Allow the Script**:
+   - To temporarily allow the execution of PowerShell scripts, you can set the policy to `Unrestricted` or `RemoteSigned`. For example:
+     ```powershell
+     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+     ```
+   - This will allow the execution of scripts that are either locally created or signed by a trusted publisher.
+
+4. **Revert Back to the Original Policy** (optional but recommended):
+   - After running the script, you can revert to your original policy for security reasons:
+     ```powershell
+     Set-ExecutionPolicy -ExecutionPolicy [YourOriginalPolicy] -Scope CurrentUser
+     ```
+   - Replace `[YourOriginalPolicy]` with the policy noted in step 2.
+
+> **Note:**    
+> Changing the execution policy might affect your system's security. Always ensure that the scripts you are running are from a trusted source.
 
 ## Auto Scheduling
 
