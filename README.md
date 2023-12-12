@@ -4,14 +4,19 @@ This PowerShell script is designed to track user activity on a Windows 10 / 11 s
 
 ## Installation
 
-To use this script, you should have administrative access to the Windows 10 system where you want to track user activity.
+To use this script, you should have administrative access to the Windows 10 / 11 system where you want to track user activity.
 
-1. **Download the Script**: 
-   - Download the `UserActivityTracking.ps1` script from this repository.
-   - Place the script in a suitable directory, for example, `C:\Scripts\`.
+1. **Clone the Repository**: 
+   - Open a command prompt or terminal.
+   - Navigate to the directory where you want to place the repository.
+   - Run the command: `git clone https://github.com/jonathangeller/windows-rdp-user-tracker.git`
+   - This will create a folder named `windows-rdp-user-tracker` containing the script.
+   - Navigate into the repository folder: `cd windows-rdp-user-tracker`
+   - Find the `UserActivityTracking.ps1` script in the repository.
 
 2. **Prerequisites**: 
    - Ensure PowerShell is installed on your system. This script is compatible with PowerShell 5.1 and later versions.
+
 
 ## Usage
 
